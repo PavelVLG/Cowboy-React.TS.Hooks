@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import "./MainWrapper.css";
 import { LevelChange } from "../Element/LevelChange/LevelChange";
@@ -9,6 +10,14 @@ import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 
 export const MainWrapper = () => {
+  fetch("http://localhost:3000/DataLevel.json")
+    .then((respons) => {
+      return respons.json();
+    })
+    .then((data) => {
+      console.log(data.level1);
+    });
+
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
