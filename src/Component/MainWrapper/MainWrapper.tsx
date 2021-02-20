@@ -10,13 +10,19 @@ import { Display } from "../Element/Display/Display";
 export const MainWrapper = () => {
   return (
     <div className="mainWrapper">
-      <LevelChange />
-      <Output />
-      <PopUp />
-      <StartButton />
-      <SubTitle />
-      <TitleHeader />
-      <Display />
+      <div className="mainFlex">
+        <div>
+          <LevelChange />
+          <Output />
+          <PopUp />
+          <StartButton />
+          <SubTitle />
+          <TitleHeader />
+        </div>
+        <div>
+          <Display />
+        </div>
+      </div>
     </div>
   );
 };
