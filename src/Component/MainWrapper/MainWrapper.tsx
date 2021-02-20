@@ -6,16 +6,17 @@ import { PopUp } from "../Element/PopUp/PopUp";
 import { StartButton } from "../Element/StartButton/StartButton";
 import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
-
+import { Display } from "../Element/Display/Display";
 export const MainWrapper = () => {
   return (
-    <>
+    <div className="mainWrapper">
       <LevelChange />
       <Output />
       <PopUp />
       <StartButton />
       <SubTitle />
       <TitleHeader />
-    </>
+      <Display />
+    </div>
   );
 };
