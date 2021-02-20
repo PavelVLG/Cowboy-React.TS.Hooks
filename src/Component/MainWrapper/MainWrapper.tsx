@@ -17,7 +17,7 @@ export const MainWrapper = () => {
       return respons.json();
     })
     .then((data) => {
-      console.log(data.level[1]);
+      console.log(data.level[2]);
     });
 
   return (
