@@ -1,5 +1,5 @@
-import './LevelChange.css';
+import "./LevelChange.css";
 
 export const LevelChange = () => {
-    return <>LevelChange</>
+  return <div className="levelChage">LevelChange</div>;
 };

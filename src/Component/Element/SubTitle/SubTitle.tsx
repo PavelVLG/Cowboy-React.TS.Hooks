@@ -1,5 +1,5 @@
 import './SubTitle.css';
 
 export const SubTitle= () => {
-    return <>SubTitlen</>
+    return <div className="subTitle">SubTitle</div>
 };

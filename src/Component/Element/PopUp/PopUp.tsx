@@ -1,5 +1,5 @@
-import './PopUp.css';
+import "./PopUp.css";
 
 export const PopUp = () => {
-    return <>PopUp</>
+  return <div className="popUp"> PopUp </div>;
 };

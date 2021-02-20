@@ -1,5 +1,5 @@
-import './Output.css';
+import "./Output.css";
 
 export const Output = () => {
-    return <>Output</>
+  return <div className="outPut">Output</div>;
 };

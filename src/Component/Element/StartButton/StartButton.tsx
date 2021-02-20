@@ -1,5 +1,5 @@
 import './StartButton.css';
 
 export const StartButton= () => {
-    return <>StartButton</>
+    return <div className="startButton"> StartButton </div>;
 };

@@ -1,5 +1,5 @@
-import './TitleHeader.css';
+import "./TitleHeader.css";
 
 export const TitleHeader = () => {
-    return <>TitleHeader</>
+  return <div className="titleHeader"></div>;
 };
