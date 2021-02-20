@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
-import { MainWrapper } from '../MainWrapper /MainWrapper ';
+import { MainWrapper } from '../Component/MainWrapper/MainWrapper';
 
 
 function App() {
