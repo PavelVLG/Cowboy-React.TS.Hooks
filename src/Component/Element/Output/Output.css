@@ -9,10 +9,13 @@
   .exit-befor {
     margin-top: 0;
     font-size: 20px;
-    margin-left: 3px;
+    margin-left: 3px; 
     margin-bottom: 0;
   }
   .exitInput {
+    outline : none;
+    resize : none;
+    overflow: hidden;
     color: #666666;
     font-size: 18px;
     background-color: #fafafa21;

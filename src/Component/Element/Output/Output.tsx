@@ -11,6 +11,7 @@ export const Output = () => {
       <textarea
         className="exitInput"
         placeholder="поле ввода"
+        rows="4"
         onChange={(e) => {
           console.log(e.target.value, "OutPut");
         }}
