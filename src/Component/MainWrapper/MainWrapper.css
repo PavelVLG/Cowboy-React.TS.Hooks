@@ -1,13 +1,18 @@
-.mainWrapper{
-    border: 3px solid black;
+.mainWrapper {
+  border: 3px solid black;
 }
-.blockBg{
-    background-color: rgba(95, 158, 160, 0.589)
+.blockBg {
+  background-color: rgba(95, 158, 160, 0.589);
 }
-.mainFlex{
-    width: 100%;
-    height: 100%;
-    border: 3px solid red;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+.mainFlex {
+  width: 100%;
+  height: 100%;
+  border: 3px solid red;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.displayWrapper {
+  background: url("/src/Source/svg/Mask.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

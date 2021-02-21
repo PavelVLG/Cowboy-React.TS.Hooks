@@ -31,7 +31,7 @@ export const MainWrapper = () => {
           <StartButton />
           <PopUp />
         </div>
-        <div>
+        <div className="displayWrapper">
           <Display />
         </div>
       </div>
