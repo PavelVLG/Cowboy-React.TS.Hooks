@@ -3,10 +3,10 @@
     justify-content: flex-end;
   }
   .startConteiner {
-    margin-top: -200px; /*!поправить*/
+    margin-top: -43px; /*!поправить*/
   }
   .startButton {
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
     font-family: fantasy;
