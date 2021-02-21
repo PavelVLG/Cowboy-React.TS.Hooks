@@ -1,7 +1,6 @@
 .App{
   width: 100vw;
   height: 100vh;
-  background-color: #dddddd;
   display: grid;
   grid-template-rows: 0.5fr 4fr 0.5fr;
 }

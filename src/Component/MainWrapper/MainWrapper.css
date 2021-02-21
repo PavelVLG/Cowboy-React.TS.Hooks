@@ -1,6 +1,9 @@
 .mainWrapper{
     border: 3px solid black;
 }
+.blockBg{
+    background-color: rgba(95, 158, 160, 0.589)
+}
 .mainFlex{
     width: 100%;
     height: 100%;

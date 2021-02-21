@@ -23,7 +23,7 @@ export const MainWrapper = () => {
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
-        <div>
+        <div className="blockBg">
           <TitleHeader />
           <SubTitle />
           <LevelChange />
