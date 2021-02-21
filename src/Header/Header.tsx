@@ -1,18 +1,16 @@
 import React from "react";
 import "./Header.css";
+
 export const Header: React.FC = () => {
   return (
     <nav className="header">
       <div className="headerLogo">
-        <p>
-          Pavel<span className="logoSpan">VLG</span>4
-        </p>
+        <p>PavelVLG4</p>
       </div>
-      <div className="logoSpan">
-        <div className="headerItem">
-         <input type="checkbox" autoFocus ></input>
-        </div>
-      </div>
+      <label className="lable" htmlFor="">
+        <input className="checkbox " type="checkbox" autoFocus></input>
+        <span className="mute"></span>
+      </label>
     </nav>
   );
 };

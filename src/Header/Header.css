@@ -1,17 +1,32 @@
-.header{
-    background-color: #666666;
-    color: #ffffff;
-    font-family: fantasy;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.header {
+  background-color: #666666;
+  color: #ffffff;
+  font-family: fantasy;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.headerLogo{
+.lable:active {
+  scale: 1.2;
 }
+.checkbox {
+  display: none;
+}
+.volume {
+  display: block;
+  background: url("/src/Source/svg/Volume.svg") no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+.mute {
+  display: block;
+  background: url("/src/Source/svg/Mute.svg") no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+.mute:active {
+    scale: 1.2;
   
-.header{}
-.logoSpan{}
-.logoSpan{}
-.headerItem{}
-.headerBtn{}
- 
+}
