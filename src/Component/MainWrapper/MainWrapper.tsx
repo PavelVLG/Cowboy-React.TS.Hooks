@@ -12,17 +12,12 @@ import { Display } from "../Element/Display/Display";
 export const MainWrapper = () => {
   const [level, setlevel] = useState(1);
 
-  const jsonApi = (id: number) => {
-    fetch("http://localhost:3000/DataLevel.json")
-      .then((respons) => {
-        return respons.json();
-      })
-      .then((data) => {
-        console.log(data.level[id]);
-      });
+  const jsonApi = async (id: number) => {
+    const res = await fetch("http://localhost:3000/DataLevel.json");
+    const resorse = await res.json();
+    return resorse.level[id];
   };
-  jsonApi(level);
-
+  jsonApi(level).then((f) => console.log(f));
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
