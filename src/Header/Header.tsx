@@ -10,9 +10,7 @@ export const Header: React.FC = () => {
       </div>
       <div className="logoSpan">
         <div className="headerItem">
-          <button className="headerBtn" type="button">
-            Включить атмосферу
-          </button>
+         <input type="checkbox" autoFocus ></input>
         </div>
       </div>
     </nav>
