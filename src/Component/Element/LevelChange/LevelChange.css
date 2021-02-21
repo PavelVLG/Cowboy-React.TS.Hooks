@@ -1,0 +1,31 @@
+.textButton-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .textFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonText {
+    color: #666666;
+    font-size: 18px;
+    font-family: fantasy;
+  }
+  .battonItem {
+    display: flex;
+  }
+  .button-1 {
+    background-color: #666666;
+    color: #fafafa;
+    min-width: 75px;
+    border-radius: 10px 0 0 10px;
+  }
+  .button-2 {
+    background-color: #666666;
+    color: #fafafa;
+    min-width: 75px;
+    border-radius: 0 10px 10px 0;
+  }
