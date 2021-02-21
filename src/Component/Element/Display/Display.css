@@ -1,0 +1,33 @@
+.displayСonteiner {
+    min-height: 450px;
+    flex-basis: 60%;
+    background: url("/src/Source/svg/Mask.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+  }
+  .displayItem-cowboy {
+    margin: 5px;
+    min-width: 8.5%;
+    min-height: 29%;
+    background: url("/src//Source/svg/cowboy.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .displayItem {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 4px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .displayItem-Prison {
+    margin: 5px;
+    min-width: 8.5%;
+    min-height: 29%;
+    background: url("/src//Source/svg/cowboy.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
