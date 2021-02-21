@@ -11,7 +11,7 @@ export const LevelChange = () => {
           <div>
             <button className="button-1" type="button" onClick={()=> console.log("button--1")}>
               назад
-            </button>
+            </button> 
           </div>
           <div>
             <button className="button-2" type="button" onClick={()=> console.log("button--2")}>
