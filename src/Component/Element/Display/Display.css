@@ -25,9 +25,9 @@
   }
   .displayItem-Prison {
     margin: 5px;
-    min-width: 8.5%;
-    min-height: 29%;
-    background: url("/src//Source/svg/cowboy.svg");
-    background-repeat: no-repeat;
+    background: url("/src/Source/svg/Prison.svg") no-repeat;
     background-size: contain;
+    width: 120px;
+    height: 120px;
+    padding-top: 0;
   }
