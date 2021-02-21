@@ -9,4 +9,4 @@ export const Display = () => {
       </div>
     </div>
   );
-};
+}; 
