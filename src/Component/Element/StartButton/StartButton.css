@@ -1,0 +1,37 @@
+.start {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .startConteiner {
+    margin-top: -200px; /*!поправить*/
+  }
+  .startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fantasy;
+    font-size: 23px;
+    border-radius: 4px;
+    color: #fafafa;
+    background-color: #666666;
+    letter-spacing: 2px;
+    min-width: 105px;
+  }
+  .startButton:after {
+    content: url("/src/Source/svg/handcuffs.svg");
+    display: inline-block;
+    margin-right: -10px;
+    opacity: 0;
+    transition: all 2s ease 0s;
+  }
+  .startButton:hover:after {
+    opacity: 1;
+    display: inline-block;
+    margin-right: 0;
+    margin-left: 1em;
+    transition: all 500ms ease 0s;
+  }
+  .startButton::before {
+    content: "er";
+    opacity: 0;
+  }
