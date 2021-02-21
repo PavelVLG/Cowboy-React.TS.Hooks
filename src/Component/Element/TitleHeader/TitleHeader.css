@@ -1,0 +1,11 @@
+.headerText{
+    display: flex;
+    font-family: fantasy;
+    font-size: 15px;
+    color: #666666;
+    text-align: left;
+    margin: 0 auto;
+}
+.headerTitle{ 
+    text-align: center;
+}

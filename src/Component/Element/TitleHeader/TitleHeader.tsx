@@ -1,5 +1,14 @@
 import "./TitleHeader.css";
 
 export const TitleHeader = () => {
-  return <div className="titleHeader">TitleHeader</div>;
+  return (
+    <div className="headerText">
+      <div className="headerTitle">
+        <p>
+          Введение Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+          blanditiis cumque repellendus, officia voluptatibus omnis.
+        </p>
+      </div>
+    </div>
+  );
 };
