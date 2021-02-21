@@ -1,0 +1,19 @@
+.footer {
+    background-color: #666666;
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__flex {
+    color: inherit;
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .footer__flex img {
+    margin-top: 5px;
+    max-width: 20%;
+  }
