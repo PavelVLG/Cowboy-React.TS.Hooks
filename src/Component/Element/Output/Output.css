@@ -1,0 +1,22 @@
+
+.exitConteiner {
+    color: #666666;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .exit-befor {
+    margin-top: 0;
+    font-size: 20px;
+    margin-left: 3px;
+  }
+  .exitInput {
+    color: #666666;
+    font-size: 18px;
+    background-color: #fafafa21;
+    border-radius: 5px;
+  }
+  .exit-after {
+    font-size: 20px;
+  }
