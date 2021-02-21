@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MainWrapper.css";
 import { LevelChange } from "../Element/LevelChange/LevelChange";
 import { Output } from "../Element/Output/Output";
@@ -10,16 +10,17 @@ import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 
 export const MainWrapper = () => {
-
-
-  fetch("http://localhost:3000/DataLevel.json")
-    .then((respons) => {
-      return respons.json();
-    })
-    .then((data) => {
-      console.log(data.level[2]);
-    });
-
+  const [level, setlevel] = useState(1);
+  const jsonApi = (id: number) => {
+    fetch("http://localhost:3000/DataLevel.json")
+      .then((respons) => {
+        return respons.json();
+      })
+      .then((data) => {
+        console.log(data.level[id]);
+      });
+  };
+  jsonApi(level);
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
