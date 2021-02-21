@@ -11,6 +11,7 @@ import { Display } from "../Element/Display/Display";
 
 export const MainWrapper = () => {
   const [level, setlevel] = useState(1);
+
   const jsonApi = (id: number) => {
     fetch("http://localhost:3000/DataLevel.json")
       .then((respons) => {
@@ -21,6 +22,7 @@ export const MainWrapper = () => {
       });
   };
   jsonApi(level);
+
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
