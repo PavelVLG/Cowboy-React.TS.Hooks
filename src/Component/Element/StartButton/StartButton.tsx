@@ -7,7 +7,7 @@ export const StartButton = () => {
         <button
           className="startButton"
           type="button"
-          onClick={() => console.log(this.props)}
+          onClick={() => console.log()}
         >
           Старт
         </button>
