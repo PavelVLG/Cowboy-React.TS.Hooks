@@ -18,7 +18,7 @@ export const MainWrapper = () => {
     const resorse = await res.json();
     console.log(resorse.level[id]) 
   };
-
+jsonApi(level)
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
