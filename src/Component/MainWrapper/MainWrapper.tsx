@@ -11,14 +11,19 @@ import { Display } from "../Element/Display/Display";
 
 export const MainWrapper = () => {
   const [level, setlevel] = useState(1);
-  const [resorseApi, setResorseApi] = useState(null);
+  const [resorseApi, setResorseApi] = useState<object | null>();
 
   const jsonApi = async (id: number) => {
     const res = await fetch("http://localhost:3000/DataLevel.json");
     const resorse = await res.json();
-    console.log(resorse.level[id]) 
+    return resorse.level[id];
   };
-jsonApi(level)
+  useEffect(() => {
+    jsonApi(level).then((res) => {
+      setResorseApi(res);
+    });
+  }, [level]);
+  console.log(resorseApi)
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
@@ -27,7 +32,7 @@ jsonApi(level)
           <SubTitle />
           <LevelChange />
           <Output />
-          <StartButton />
+          <StartButton  {...resorseApi} />
           <PopUp />
         </div>
         <div className="displayWrapper">
