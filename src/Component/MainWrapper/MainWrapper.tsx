@@ -23,7 +23,7 @@ export const MainWrapper = () => {
       setResorseApi(res);
     });
   }, [level]);
-  console.log(resorseApi)
+  
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
