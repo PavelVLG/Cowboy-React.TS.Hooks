@@ -16,13 +16,9 @@ export const MainWrapper = () => {
   const jsonApi = async (id: number) => {
     const res = await fetch("http://localhost:3000/DataLevel.json");
     const resorse = await res.json();
-    return resorse.level[id];
+    console.log(resorse.level[id]) 
   };
-  // jsonApi(level)  /*! Зацикливание */
-  //   .then((test) => {
-  //     setResorseApi(test);
-  //   })
-  //   .then(() => console.log(resorseApi));
+
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
