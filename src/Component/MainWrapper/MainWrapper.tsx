@@ -23,7 +23,7 @@ export const MainWrapper: React.FC = () => {
       setResorseApi(res);
     });
   }, [level]);
-  
+
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
@@ -32,7 +32,7 @@ export const MainWrapper: React.FC = () => {
           <SubTitle />
           <LevelChange />
           <Output />
-          <StartButton  {...resorseApi} />
+          <StartButton />
           <PopUp />
         </div>
         <div className="displayWrapper">
