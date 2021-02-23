@@ -11,7 +11,7 @@ import { Display } from "../Element/Display/Display";
 
 export const MainWrapper: React.FC = () => {
   const [level, setlevel] = useState(1);
-  const [resorseApi, setResorseApi] = useState<object | null>();
+  const [resorseApi, setResorseApi] = useState<number | object>();
 
   const jsonApi = async (id: number) => {
     const res = await fetch("http://localhost:3000/DataLevel.json");
@@ -23,6 +23,12 @@ export const MainWrapper: React.FC = () => {
       setResorseApi(res);
     });
   }, [level]);
+  const changeLevel = () => {
+    console.log("ok");
+  };
+  const userInpt = () => {
+    console.log("userInpt");
+  };
 
   return (
     <div className="mainWrapper">
@@ -30,8 +36,8 @@ export const MainWrapper: React.FC = () => {
         <div className="blockBg">
           <TitleHeader />
           <SubTitle />
-          <LevelChange />
-          <Output />
+          <LevelChange onChange={changeLevel} />
+          <Output userInpt={userInpt} />
           <StartButton />
           <PopUp />
         </div>
