@@ -1,6 +1,6 @@
 import "./LevelChange.css";
 
-export const LevelChange = () => {
+export const LevelChange: React.FC = () => {
   return (
     <div className="textButton-conteiner">
       <div className="textFlex">

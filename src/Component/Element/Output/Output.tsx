@@ -1,6 +1,6 @@
 import "./Output.css";
 
-export const Output = () => {
+export const Output: React.FC = () => {
   return (
     <div className="exitConteiner">
       <p className="exit-befor">

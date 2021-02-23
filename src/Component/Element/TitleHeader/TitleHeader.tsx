@@ -1,6 +1,6 @@
 import "./TitleHeader.css";
 
-export const TitleHeader = () => {
+export const TitleHeader: React.FC = () => {
   return (
     <div className="headerText">
       <div className="headerTitle">

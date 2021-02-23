@@ -5,7 +5,7 @@ import instagram from "../Source/png/instagram.png";
 import mail from "../Source/png/mail.png";
 import face from "../Source/png/face.png";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <div className="footer">
       <div className="footer__flex">

@@ -9,7 +9,7 @@ import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 
-export const MainWrapper = () => {
+export const MainWrapper: React.FC = () => {
   const [level, setlevel] = useState(1);
   const [resorseApi, setResorseApi] = useState<object | null>();
 

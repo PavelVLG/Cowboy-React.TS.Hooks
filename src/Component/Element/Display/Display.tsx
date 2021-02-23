@@ -1,6 +1,6 @@
 import "./Display.css";
 
-export const Display = () => {
+export const Display: React.FC = () => {
   return (
     <div className="displayСonteiner">
       <div className="displayItem-cowboy"></div>

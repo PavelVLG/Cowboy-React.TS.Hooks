@@ -1,6 +1,6 @@
 import "./PopUp.css";
 
-export const PopUp = () => {
+export const PopUp: React.FC = () => {
   return (
     <div className="modal">
       <div className="modalContent">
