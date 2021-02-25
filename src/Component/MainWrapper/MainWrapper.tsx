@@ -18,7 +18,7 @@ interface DataJson {
 }
 
 export const MainWrapper: React.FC = () => {
-  const [level, setlevel] = useState(1);
+  const [level, setlevel] = useState<number>(1);
   const [resorseApi, setResorseApi] = useState<DataJson>();
 
   const jsonApi = async (id: number) => {
@@ -26,7 +26,7 @@ export const MainWrapper: React.FC = () => {
     const resorse = await res.json();
     return resorse.level[id];
   };
-
+  console.log();
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
