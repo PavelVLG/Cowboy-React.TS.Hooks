@@ -10,6 +10,7 @@ import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 
 interface DataJson {
+  data: object;
   introductory: string;
   askDescription: string;
   task: { key: object; value: string };
@@ -22,19 +23,32 @@ export const MainWrapper: React.FC = () => {
   const [resorseApi, setResorseApi] = useState<DataJson>();
   const [check, setCheck] = useState<boolean>(false);
 
-  const jsonApi = async (id: number) => {
-    const res = await fetch("http://localhost:3000/DataLevel.json");
-    const resorse = await res.json();
-    return resorse.Step[id];
-  };
+  useEffect(() => {
+    setCheck(true);
+    fetch("http://localhost:3000/DataLevel.json")
+      .then((response) => {
+        if (response.status !== 200) {
+          console.log(`сатус ошибки ${response.status}`);
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        if ("step" in data) {
+          setCheck(false);
+          setResorseApi(data.step[level]);
+        }
+      });
+  }, [level]);
 
   const View = () => {
+    let answer;
     if (!check) {
-      console.log("check false");
+      answer = "все ок";
     } else {
-      console.log("check true");
+      answer = "что то не ок";
     }
-    return <></>;
+    return <>{answer}</>;
   };
 
   return (
