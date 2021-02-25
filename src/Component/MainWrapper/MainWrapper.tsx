@@ -20,12 +20,15 @@ interface DataJson {
 export const MainWrapper: React.FC = () => {
   const [level, setlevel] = useState<number>(1);
   const [resorseApi, setResorseApi] = useState<DataJson>();
+  const [check, setCheck] = useState<boolean>(false);
 
   const jsonApi = async (id: number) => {
-    const res = await fetch("http://localhost:3000/DataLevel.json");
+    const res = await fetch("http://localhost:3000/DataLevel.json")
     const resorse = await res.json();
+    console.log(res)
     return resorse.level[id];
   };
+  jsonApi(level)
   console.log();
   return (
     <div className="mainWrapper">
