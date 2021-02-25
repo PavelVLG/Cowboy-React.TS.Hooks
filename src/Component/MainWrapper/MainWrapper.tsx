@@ -20,7 +20,7 @@ interface DataJson {
 
 export const MainWrapper: React.FC = () => {
   const [level, setlevel] = useState<number>(1);
-  const [resorseApi, setResorseApi] = useState<DataJson>();
+  const [myJson, setMyJson] = useState<DataJson>();
   const [check, setCheck] = useState<boolean>(false);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export const MainWrapper: React.FC = () => {
       .then((data) => {
         if ("step" in data) {
           setCheck(false);
-          setResorseApi(data.step[level]);
+          setMyJson(data.step[level]);
         }
       });
   }, [level]);
