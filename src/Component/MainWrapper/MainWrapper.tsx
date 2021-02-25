@@ -25,8 +25,8 @@ export const MainWrapper: React.FC = () => {
   const jsonApi = async (id: number) => {
     const res = await fetch("http://localhost:3000/DataLevel.json")
     const resorse = await res.json();
-    console.log(res)
-    return resorse.level[id];
+    console.log(resorse.Step[id],'что то');
+    return resorse.Step[id];
   };
   jsonApi(level)
   console.log();
