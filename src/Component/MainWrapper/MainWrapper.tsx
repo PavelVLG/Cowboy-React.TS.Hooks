@@ -50,7 +50,9 @@ export const MainWrapper: React.FC = () => {
     }
     return (
       <div className={view}>
-        <div className="viewContent">Извините! У нас неполадки</div>
+        <div className="viewContent">
+          <p>Ожидание ответа от сервера</p>
+        </div>
       </div>
     );
   };

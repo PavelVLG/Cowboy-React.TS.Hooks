@@ -16,3 +16,27 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.vievOk {
+  display: none;
+}
+.viewErr {
+ position: absolute;
+  background-color: #6666668a;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.viewContent {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+  border-radius: 25px;
+  width: 300px;
+  height: 150px;
+  background-color:#666666;
+color: white;
+}
