@@ -25,6 +25,7 @@ export const MainWrapper: React.FC = () => {
     const res = await fetch("http://localhost:3000/DataLevel.json");
     const resorse = await res.json();
     return resorse.level[id];
+    
   };
   useEffect(() => {
     jsonApi(level).then((res) => {
@@ -37,7 +38,7 @@ export const MainWrapper: React.FC = () => {
   const userInpt = () => {
     console.log("userInpt");
   };
-
+  console.log(resorseApi);
   return (
     <div className="mainWrapper">
       <div className="mainFlex">
