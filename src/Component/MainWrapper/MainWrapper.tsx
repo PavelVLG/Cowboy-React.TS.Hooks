@@ -9,9 +9,17 @@ import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 
+interface DataJson {
+  introductory: string;
+  askDescription: string;
+  task: { key: object; value: string };
+  infoElement: [];
+  locationCells: { key: object; value: string };
+}
+
 export const MainWrapper: React.FC = () => {
   const [level, setlevel] = useState(1);
-  const [resorseApi, setResorseApi] = useState<number | object>();
+  const [resorseApi, setResorseApi] = useState<DataJson>();
 
   const jsonApi = async (id: number) => {
     const res = await fetch("http://localhost:3000/DataLevel.json");
@@ -23,8 +31,8 @@ export const MainWrapper: React.FC = () => {
       setResorseApi(res);
     });
   }, [level]);
-  const changeLevel = () => {
-    console.log("ok");
+  const changeLevel = (event: React.ChangeEvent<HTMLButtonElement>) => {
+    console.log("changeLevel");
   };
   const userInpt = () => {
     console.log("userInpt");
@@ -36,8 +44,8 @@ export const MainWrapper: React.FC = () => {
         <div className="blockBg">
           <TitleHeader />
           <SubTitle />
-          <LevelChange onChange={changeLevel} />
-          <Output userInpt={userInpt} />
+          <LevelChange />
+          <Output />
           <StartButton />
           <PopUp />
         </div>
