@@ -28,7 +28,7 @@ export const MainWrapper: React.FC = () => {
     fetch("http://localhost:3000/DataLevel.json")
       .then((response) => {
         if (response.status !== 200) {
-          console.log(`сатус ошибки ${response.status}`);
+          console.log(`сатус ошибки № ${response.status}`);
         } else {
           return response.json();
         }
@@ -42,13 +42,17 @@ export const MainWrapper: React.FC = () => {
   }, [level]);
 
   const View = () => {
-    let answer;
+    let view;
     if (!check) {
-      answer = "все ок";
+      view = "vievOk";
     } else {
-      answer = "что то не ок";
+      view = "viewErr";
     }
-    return <>{answer}</>;
+    return (
+      <div className={view}>
+        <div className="viewContent">Извините! У нас неполадки</div>
+      </div>
+    );
   };
 
   return (
