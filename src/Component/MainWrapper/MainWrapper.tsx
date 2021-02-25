@@ -23,14 +23,23 @@ export const MainWrapper: React.FC = () => {
   const [check, setCheck] = useState<boolean>(false);
 
   const jsonApi = async (id: number) => {
-    const res = await fetch("http://localhost:3000/DataLevel.json")
+    const res = await fetch("http://localhost:3000/DataLevel.json");
     const resorse = await res.json();
     return resorse.Step[id];
   };
 
-  console.log();
+  const View = () => {
+    if (!check) {
+      console.log("check false");
+    } else {
+      console.log("check true");
+    }
+    return <></>;
+  };
+
   return (
     <div className="mainWrapper">
+      <View />
       <div className="mainFlex">
         <div className="blockBg">
           <TitleHeader />
