@@ -8,10 +8,10 @@ import { StartButton } from "../Element/StartButton/StartButton";
 import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
-import {IData} from "../Element/Interfaces/Interfaces";
+
 
 export const MainWrapper: React.FC = () => {
-  const [myJson, setMyJson] = useState<IData>({
+  const [myJson, setMyJson] = useState({
     introductory: null ,
     askDescription: null,
     task: null,
@@ -56,12 +56,12 @@ export const MainWrapper: React.FC = () => {
   };
 
   return (
-     
+const [task] = myJson; 
     <div className="mainWrapper">
       <View />
       <div className="mainFlex">
         <div className="blockBg">
-          <TitleHeader titleText={myJson!.introductory} />
+          <TitleHeader titleText={myJson.introductory} />
           <SubTitle />
           <LevelChange />
           <Output />
