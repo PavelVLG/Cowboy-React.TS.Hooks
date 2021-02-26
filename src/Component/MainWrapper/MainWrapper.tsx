@@ -54,7 +54,7 @@ export const MainWrapper: React.FC = () => {
       <View />
       <div className="mainFlex">
         <div className="blockBg">
-          <TitleHeader titleText={myJson!.introductory} />
+          <TitleHeader titleText={myJson!} />
           <SubTitle />
           <LevelChange />
           <Output />

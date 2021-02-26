@@ -1,5 +1,4 @@
 export interface IData {
-  start: null;
   introductory: string;
   askDescription: string;
   task: { key: object; value: string };
