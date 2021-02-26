@@ -9,10 +9,9 @@ import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 import { IData } from "../Element/Interfaces/Interfaces";
-import { start } from "repl";
 
 export const MainWrapper: React.FC = () => {
-  const [myJson, setMyJson] = useState(new Date());
+  const [myJson, setMyJson] = useState<IData | null>(null);
   const [level, setlevel] = useState<number>(1);
   const [check, setCheck] = useState<boolean>(false);
 
@@ -50,6 +49,9 @@ export const MainWrapper: React.FC = () => {
     );
   };
 
+  const onAdd = (title: string) =>{
+    console.log(myJson, title)
+  }
   return (
     <div className="mainWrapper">
       <View />
@@ -59,7 +61,7 @@ export const MainWrapper: React.FC = () => {
           <SubTitle />
           <LevelChange />
           <Output />
-          <StartButton myJson={myJson} />
+          <StartButton onAdd={onAdd} />
           <PopUp />
         </div>
         <div className="displayWrapper">

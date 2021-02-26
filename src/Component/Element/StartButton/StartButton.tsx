@@ -1,19 +1,19 @@
 import React from "react";
-import { IData } from "../Interfaces/Interfaces";
 import "./StartButton.css";
 
-type DataProps = {
-  myJson: IData;
-};
+interface DataText{
+  onAdd(title: string):void
+}
 
-export const StartButton: React.FC<DataProps> = () => {
+
+export const StartButton: React.FC <DataText>= (props) => {
   return (
     <div className="start">
       <div className="startConteiner">
         <button
           className="startButton"
           type="button"
-          onClick={() => console.log()}
+          onClick={() => props.onAdd('половина пути')}
         >
           Старт
         </button>
