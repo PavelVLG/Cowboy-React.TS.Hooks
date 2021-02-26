@@ -9,9 +9,10 @@ import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 import { IData } from "../Element/Interfaces/Interfaces";
+import { start } from "repl";
 
 export const MainWrapper: React.FC = () => {
-  const [myJson, setMyJson] = useState<IData>(null);
+  const [myJson, setMyJson] = useState(new Date());
   const [level, setlevel] = useState<number>(1);
   const [check, setCheck] = useState<boolean>(false);
 
