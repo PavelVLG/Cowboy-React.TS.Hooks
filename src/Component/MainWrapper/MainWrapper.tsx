@@ -56,7 +56,7 @@ export const MainWrapper: React.FC = () => {
   };
 
   return (
-const [task] = myJson; 
+
     <div className="mainWrapper">
       <View />
       <div className="mainFlex">
