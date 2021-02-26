@@ -20,7 +20,7 @@
   display: none;
 }
 .viewErr {
- position: absolute;
+  position: absolute;
   background-color: #6666668a;
   width: 100vw;
   height: 100vh;
@@ -37,6 +37,6 @@
   border-radius: 25px;
   width: 300px;
   height: 150px;
-  background-color:#666666;
-color: white;
+  background-color: #666666;
+  color: white;
 }
