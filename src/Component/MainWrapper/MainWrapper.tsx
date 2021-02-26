@@ -49,19 +49,16 @@ export const MainWrapper: React.FC = () => {
     );
   };
 
-  const onAdd = (title: string) =>{
-    console.log(myJson, title)
-  }
   return (
     <div className="mainWrapper">
       <View />
       <div className="mainFlex">
         <div className="blockBg">
-          <TitleHeader />
+          <TitleHeader titleText={myJson!.introductory} />
           <SubTitle />
           <LevelChange />
           <Output />
-          <StartButton onAdd={onAdd} />
+          <StartButton />
           <PopUp />
         </div>
         <div className="displayWrapper">

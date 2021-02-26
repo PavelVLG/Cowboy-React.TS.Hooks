@@ -1,6 +1,9 @@
 import "./TitleHeader.css";
 
-export const TitleHeader: React.FC = () => {
+interface TitleText {
+  titleText: string;
+}
+export const TitleHeader: React.FC<TitleText> = (props) => {
   return (
     <div className="headerText">
       <div className="headerTitle">
