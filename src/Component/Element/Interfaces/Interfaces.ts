@@ -1,5 +1,5 @@
 export interface IData {
-  introductory: string;
+  introductory: string ;
   askDescription: string;
   task: { key: object; value: string };
   infoElement: string[];

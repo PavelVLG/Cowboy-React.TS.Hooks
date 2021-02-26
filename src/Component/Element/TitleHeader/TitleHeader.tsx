@@ -1,23 +1,21 @@
-import React from 'react';
+import React from "react";
 import "./TitleHeader.css";
 
 interface TitleText {
-  titleText: {introductory: string}
+  titleText: { introductory: string };
 }
 export const TitleHeader: React.FC<TitleText> = ({ titleText }) => {
-  if (!titleText) {
-    console.log("Не ок");
-  } else {
-    console.log(titleText);
-  }
-  console.log();
+  const TitleText = (): JSX.Element => {
+    if(titleText){
+      return <p>{titleText.introductory}</p>
+    }else{
+      return<></>
+    }
+  };
   return (
     <div className="headerText">
       <div className="headerTitle">
-        <p>
-          Введение Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-          blanditiis cumque repellendus, officia voluptatibus omnis.
-        </p>
+        <TitleText />
       </div>
     </div>
   );
