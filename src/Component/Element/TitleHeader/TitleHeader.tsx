@@ -2,14 +2,17 @@ import React from "react";
 import "./TitleHeader.css";
 
 interface TitleText {
-  titleText: { introductory: string | null } | null;
+  titleText: { introductory: string } | null;
 }
 export const TitleHeader: React.FC<TitleText> = ({ titleText }) => {
- console.log(titleText,"title" )
+  const TextTitle = (): JSX.Element => {
+    return <p>{titleText}</p>;
+  };
+
   return (
     <div className="headerText">
       <div className="headerTitle">
-       df
+        <TextTitle />
       </div>
     </div>
   );
