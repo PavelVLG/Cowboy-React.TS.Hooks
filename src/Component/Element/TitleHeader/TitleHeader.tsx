@@ -2,20 +2,14 @@ import React from "react";
 import "./TitleHeader.css";
 
 interface TitleText {
-  titleText: { introductory: string };
+  titleText: { introductory: string | null } | null;
 }
 export const TitleHeader: React.FC<TitleText> = ({ titleText }) => {
-  const TitleText = (): JSX.Element => {
-    if(titleText){
-      return <p>{titleText.introductory}</p>
-    }else{
-      return<></>
-    }
-  };
+ console.log(titleText )
   return (
     <div className="headerText">
       <div className="headerTitle">
-        <TitleText />
+       df
       </div>
     </div>
   );
