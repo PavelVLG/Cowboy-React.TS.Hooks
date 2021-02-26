@@ -8,19 +8,12 @@ import { StartButton } from "../Element/StartButton/StartButton";
 import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
+import { IData } from "../Element/Interfaces/Interfaces";
 
-interface DataJson {
-  data: object;
-  introductory: string;
-  askDescription: string;
-  task: { key: object; value: string };
-  infoElement: [];
-  locationCells: { key: object; value: string };
-}
 
 export const MainWrapper: React.FC = () => {
   const [level, setlevel] = useState<number>(1);
-  const [myJson, setMyJson] = useState<DataJson>();
+  const [myJson, setMyJson] = useState<IData>();
   const [check, setCheck] = useState<boolean>(false);
 
   useEffect(() => {
