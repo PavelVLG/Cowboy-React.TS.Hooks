@@ -1,10 +1,16 @@
+import React from "react";
 import "./SubTitle.css";
-
-export const SubTitle = () => {
+interface addData {
+  subTitleText: { taskDescription: string } | null;
+}
+export const SubTitle: React.FC<addData> = ({ subTitleText }) => {
+  const SubTitleText = (): JSX.Element => {
+    return <p> {subTitleText}</p>;
+  };
   return (
     <div className="level">
       <div className="level__header">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <SubTitleText />
       </div>
       <div className="level__ul">
         <ul>

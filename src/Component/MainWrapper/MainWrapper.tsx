@@ -9,11 +9,10 @@ import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 
-
 export const MainWrapper: React.FC = () => {
   const [myJson, setMyJson] = useState({
-    introductory: null ,
-    askDescription: null,
+    introductory: null,
+    taskDescription: null,
     task: null,
     infoElement: null,
     locationCells: null,
@@ -56,13 +55,12 @@ export const MainWrapper: React.FC = () => {
   };
 
   return (
-
     <div className="mainWrapper">
       <View />
       <div className="mainFlex">
         <div className="blockBg">
           <TitleHeader titleText={myJson.introductory} />
-          <SubTitle />
+          <SubTitle subTitleText={myJson.taskDescription} />
           <LevelChange />
           <Output />
           <StartButton />
