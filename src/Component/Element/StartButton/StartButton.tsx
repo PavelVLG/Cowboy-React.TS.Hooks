@@ -2,7 +2,11 @@ import React from "react";
 import { IData } from "../Interfaces/Interfaces";
 import "./StartButton.css";
 
-export const StartButton: React.FC<IData> = () => {
+type DataProps = {
+  myJson: IData;
+};
+
+export const StartButton: React.FC<DataProps> = () => {
   return (
     <div className="start">
       <div className="startConteiner">

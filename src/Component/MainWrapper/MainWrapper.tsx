@@ -10,10 +10,9 @@ import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
 import { IData } from "../Element/Interfaces/Interfaces";
 
-
 export const MainWrapper: React.FC = () => {
+  const [myJson, setMyJson] = useState<IData>(null);
   const [level, setlevel] = useState<number>(1);
-  const [myJson, setMyJson] = useState<IData>();
   const [check, setCheck] = useState<boolean>(false);
 
   useEffect(() => {
@@ -59,7 +58,7 @@ export const MainWrapper: React.FC = () => {
           <SubTitle />
           <LevelChange />
           <Output />
-          <StartButton />
+          <StartButton myJson={myJson} />
           <PopUp />
         </div>
         <div className="displayWrapper">
