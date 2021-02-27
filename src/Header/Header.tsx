@@ -11,15 +11,19 @@ export const Header: React.FC = () => {
     }
     return sound;
   };
-
+  const test = (): any => {
+    setVolume((): any => {
+      setVolume(!volume);
+    });
+  };
   return (
     <nav className="header">
       <div className="headerLogo">
         <p>PavelVLG4</p>
       </div>
       <label className="lable" htmlFor="">
-        <input className="checkbox" type="checkbox"></input>
-        <span className={sound()}></span>
+        <input className="checkbox" type="checkbox" ></input>
+        <span className={sound()} onClick={test}></span>
       </label>
     </nav>
   );
