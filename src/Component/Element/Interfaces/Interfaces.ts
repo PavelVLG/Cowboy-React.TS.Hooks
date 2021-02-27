@@ -5,3 +5,4 @@ export interface IData {
   infoElement: string[] | null;
   locationCells: { key: object; property: string } | null;
 }
+ 

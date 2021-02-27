@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: space-around;
 }
-.lable:active {
-  scale: 1.2;
+.lable {
+  min-width: 50px;
 }
 .checkbox {
   display: none;
@@ -16,6 +16,7 @@
   display: block;
   background: url("/src/Source/svg/Volume.svg") no-repeat;
   background-size: contain;
+  border: none;
   width: 40px;
   height: 40px;
 }
@@ -23,7 +24,15 @@
   display: block;
   background: url("/src/Source/svg/Mute.svg") no-repeat;
   background-size: contain;
+
   width: 40px;
   height: 40px;
 }
-
+.volume:hover {
+  border: 3px solid #fafafa;
+  border-radius: 50%;
+  transition-duration: 0.35s;
+}
+.volume:active {
+  border: 6px solid #dddddd;
+}

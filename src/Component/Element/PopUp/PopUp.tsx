@@ -15,3 +15,4 @@ export const PopUp: React.FC = () => {
     </div>
   );
 };
+ 
