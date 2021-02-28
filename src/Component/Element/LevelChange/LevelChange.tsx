@@ -3,14 +3,15 @@ import "./LevelChange.css";
 
 interface PropsFunc {
   changeLevel: (e: any) => void;
+  level: number;
 }
 
-export const LevelChange: React.FC<PropsFunc> = ({ changeLevel }) => {
+export const LevelChange: React.FC<PropsFunc> = ({ changeLevel, level }) => {
   return (
     <div className="textButton-conteiner">
       <div className="textFlex">
         <div className="buttonText">
-          <p>Уровень </p>
+          <p>Уровень {level} </p>
         </div>
         <div className="battonItem">
           <div>

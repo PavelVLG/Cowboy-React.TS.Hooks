@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/*Что то с левалами делать отдельный массив с ключами + брать все данные сразу?*/
+
 import React, { useState, useEffect } from "react";
 import "./MainWrapper.css";
 import { LevelChange } from "../Element/LevelChange/LevelChange";
@@ -54,8 +56,14 @@ export const MainWrapper: React.FC = () => {
     );
   };
   /*===*/
-  const changeLevel = (q: any) => {
-    console.log(q.target.id);
+  const changeLevel = (e: any) => {
+    let event = e.target.id;
+    if (event === "up" && level !== 3) {
+      setlevel(level + 1);
+    }
+    if (event === "down" && level !== 1) {
+      setlevel(level - 1);
+    }
   };
   /*===*/
 
@@ -69,7 +77,7 @@ export const MainWrapper: React.FC = () => {
             subTitleText={myJson.taskDescription}
             infoElement={myJson.infoElement}
           />
-          <LevelChange changeLevel={changeLevel} />
+          <LevelChange changeLevel={changeLevel} level={level} />
           <Output />
           <StartButton />
           <PopUp />
