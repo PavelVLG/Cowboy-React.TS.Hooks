@@ -4,7 +4,7 @@
   display: flex;
   position: relative;
 }
-.displayItem-cowboy {
+.displayItem-cowboy { 
   margin: 5px;
   min-width: 8.5%;
   min-height: 29%;
@@ -20,7 +20,7 @@
   right: 0;
   margin: 4px 0;
   display: flex;
-  justify-content: center;
+ 
 }
 .displayItem-Prison {
   margin: 5px;

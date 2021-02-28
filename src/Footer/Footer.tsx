@@ -1,3 +1,4 @@
+/*link вместо a*/
 import React from "react";
 import "./Footer.css";
 import telegram from "../Source/png/telegram.png";

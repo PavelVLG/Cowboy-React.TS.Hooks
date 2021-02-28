@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
   const test = (): any => {
     setVolume((): any => {
       setVolume(!volume);
-    });
+    }); 
   };
   return (
     <nav className="header">
