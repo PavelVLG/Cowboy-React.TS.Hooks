@@ -3,7 +3,7 @@ import "./Display.css";
 
 export const Display: React.FC = () => {
   return (
-    <div className="displayСonteiner">
+    <div className="displayСonteiner" style={{ justifyContent: "flex-end" }} >
       <div className="displayItem-cowboy"></div>
       <div className="displayItem" style={{ justifyContent: "center" }}>
         <div className="displayItem-Prison"></div>
