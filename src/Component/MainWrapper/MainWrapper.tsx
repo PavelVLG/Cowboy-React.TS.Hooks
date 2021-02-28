@@ -53,6 +53,11 @@ export const MainWrapper: React.FC = () => {
       </div>
     );
   };
+  /*===*/
+  const changeLevel = () => {
+    console.log("changeLevel");
+  };
+  /*===*/
 
   return (
     <div className="mainWrapper">
@@ -64,7 +69,7 @@ export const MainWrapper: React.FC = () => {
             subTitleText={myJson.taskDescription}
             infoElement={myJson.infoElement}
           />
-          <LevelChange />
+          <LevelChange changeLevel={changeLevel} />
           <Output />
           <StartButton />
           <PopUp />
