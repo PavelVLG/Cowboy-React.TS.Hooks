@@ -1,7 +1,10 @@
+/*ToDo:
+1 Если аудио засунуть в функцию, при каждом вызове она пересоздается и play теряет ссылку.
+*/
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import Music from "../Source/Audo/ugly.mp3";
-const audioPlay: HTMLAudioElement = new Audio(Music); /*как не пересоздаваить*/
+const audioPlay: HTMLAudioElement = new Audio(Music); 
 export const Header: React.FC = () => {
   const [volume, setVolume] = useState<boolean>(false);
   useEffect(() => {
