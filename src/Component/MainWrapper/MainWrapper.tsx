@@ -13,9 +13,9 @@ export const MainWrapper: React.FC = () => {
   const [myJson, setMyJson] = useState({
     introductory: "",
     taskDescription: "",
-    task: { obj: "" },
-    infoElement: "",
-    locationCells: { obj: "" },
+    task: {},
+    infoElement: [""],
+    locationCells: {},
   });
   const [level, setlevel] = useState<number>(1);
   const [check, setCheck] = useState<boolean>(false);

@@ -1,8 +1,8 @@
 import React from "react";
 import "./SubTitle.css";
 interface addData {
-  subTitleText: { taskDescription: string } | null;
-  infoElement: string[] | null;
+  subTitleText:string ;
+  infoElement: string[];
 }
 export const SubTitle: React.FC<addData> = ({ subTitleText, infoElement }) => {
   const SubTitleHeader = (): JSX.Element => {
