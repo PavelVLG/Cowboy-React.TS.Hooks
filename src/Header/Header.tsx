@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import Music from "../Source/Audo/ugly.mp3";
-const audioPlay: HTMLAudioElement = new Audio(Music);
+const audioPlay: HTMLAudioElement = new Audio(Music); /*как не пересоздаваить*/
 export const Header: React.FC = () => {
   const [volume, setVolume] = useState<boolean>(false);
-
   useEffect(() => {
     if (volume) {
       audioPlay.play();
