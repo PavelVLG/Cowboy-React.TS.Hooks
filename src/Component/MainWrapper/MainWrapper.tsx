@@ -54,8 +54,8 @@ export const MainWrapper: React.FC = () => {
     );
   };
   /*===*/
-  const changeLevel = () => {
-    console.log("changeLevel");
+  const changeLevel = (q: any) => {
+    console.log(q.target.id);
   };
   /*===*/
 
