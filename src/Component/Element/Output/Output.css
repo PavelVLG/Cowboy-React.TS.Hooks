@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px 10px 10px 10px;
-
   }
   .exit-befor {
     margin-top: 0;
@@ -14,6 +13,7 @@
     margin-bottom: 0;
   }
   .exitInput {
+   
     outline : none;
     resize : none;
     overflow: hidden;

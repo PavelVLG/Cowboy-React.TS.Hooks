@@ -14,10 +14,10 @@ export const SubTitle: React.FC<addData> = ({ subTitleText, infoElement }) => {
 
   return (
     <div className="level">
-      <div className="level__header">
+      <div className="levelHeader">
         <SubTitleHeader />
       </div>
-      <div className="level__ul">
+      <div className="levelUl">
         <ul>
           <SubTitleText />
         </ul>
