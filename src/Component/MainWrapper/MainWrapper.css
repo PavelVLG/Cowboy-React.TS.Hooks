@@ -11,7 +11,7 @@
 .blockBg {
   background-color: rgba(95, 158, 160, 0.198);
   position: relative;
-  display: grid;
+  display: grid;/*! засада*/
   align-content: space-evenly;
 }
 .displayWrapper {
