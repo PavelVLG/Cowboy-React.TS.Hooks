@@ -7,8 +7,11 @@
   justify-content: space-around;
 }
 .lable {
-  min-width: 46px;
-  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
 }
 .checkbox {
   display: none;
@@ -45,7 +48,7 @@
     border: 6px solid#ffd08d3a;
     border-radius: 50%;
   }
-  75%{
+  75% {
     border: 6px solid#ffd08da8;
     border-radius: 50%;
   }
