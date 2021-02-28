@@ -11,11 +11,11 @@ import { Display } from "../Element/Display/Display";
 
 export const MainWrapper: React.FC = () => {
   const [myJson, setMyJson] = useState({
-    introductory: null,
-    taskDescription: null,
-    task: null,
-    infoElement: null,
-    locationCells: null,
+    introductory: "",
+    taskDescription: "",
+    task: { obj: "" },
+    infoElement: "",
+    locationCells: { obj: "" },
   });
   const [level, setlevel] = useState<number>(1);
   const [check, setCheck] = useState<boolean>(false);
@@ -59,15 +59,18 @@ export const MainWrapper: React.FC = () => {
       <View />
       <div className="mainFlex">
         <div className="blockBg">
-          <TitleHeader titleText={myJson.introductory}  />
-          <SubTitle subTitleText={myJson.taskDescription} infoElement={myJson.infoElement} />
+          <TitleHeader titleText={myJson.introductory} />
+          <SubTitle
+            subTitleText={myJson.taskDescription}
+            infoElement={myJson.infoElement}
+          />
           <LevelChange />
           <Output />
           <StartButton />
           <PopUp />
         </div>
         <div className="displayWrapper">
-          <Display />
+          <Display cowboy={myJson.task} priston={myJson.locationCells} />
         </div>
       </div>
     </div>
