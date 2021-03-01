@@ -24,7 +24,7 @@ export const PopUp: React.FC<Props> = ({ setDisplay, setProps }) => {
           <p>
             <span>Джо cбежал</span>
             <label>
-              <button onClick={() => setProps(true)}>Закрыть окно</button>
+              <button onClick={() => setProps(true)}>Повторить попытку</button>
             </label>
           </p>
         </div>
