@@ -9,7 +9,7 @@ export const SubTitle: React.FC<addData> = ({ subTitleText, infoElement }) => {
     return <p> {subTitleText}</p>;
   };
   const SubTitleText = (): JSX.Element => {
-    return <li>{infoElement}</li>;
+    return <li className="levelLi">{infoElement}</li>;
   };
 
   return (

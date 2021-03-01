@@ -1,6 +1,7 @@
 .start {
     display: flex;
     justify-content: flex-end;
+    z-index: 3;
   }
   .startConteiner {
     margin-top: -43px; /*!поправить*/
