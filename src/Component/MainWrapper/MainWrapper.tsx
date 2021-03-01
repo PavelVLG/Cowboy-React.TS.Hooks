@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/*Что то с левалами делать отдельный массив с ключами + брать все данные сразу?*/
 
 import React, { useState, useEffect } from "react";
 import "./MainWrapper.css";
@@ -41,7 +40,7 @@ export const MainWrapper: React.FC = () => {
         }
       });
   }, [level]);
-  
+
   const View = () => {
     let view;
     if (!checkFetch) {
@@ -66,17 +65,23 @@ export const MainWrapper: React.FC = () => {
       setlevel(level - 1);
     }
   };
-
-  const userOutPut = (e: any): any => {
-    setUserAnswer(e);
-  };
   /*************************/
+  const ifLevelFalse = (): void => {
+    console.log("LevelFalse");
+  };
   const testing = () => {
-    let clone = userAnswer;
-    if (!clone) {
+    if (!userAnswer) {
       setComplitLevel(false);
+    } else {
+      checkUserInput(userAnswer);
     }
-    console.log(compliteLevel);
+  };
+  const checkUserInput = (item: string) => {
+    let check = item.slice();
+    check.includes(";") ? forJsxFormat(item) : ifLevelFalse();
+  };
+  const forJsxFormat = (a: string) => {
+    console.log("for Jsx");
   };
 
   return (
@@ -90,7 +95,7 @@ export const MainWrapper: React.FC = () => {
             infoElement={myJson.infoElement}
           />
           <LevelChange changeLevel={changeLevel} level={level} />
-          <Output getEvent={userOutPut} />
+          <Output getEvent={setUserAnswer} />
           <StartButton checkUser={testing} />
           <PopUp />
         </div>
