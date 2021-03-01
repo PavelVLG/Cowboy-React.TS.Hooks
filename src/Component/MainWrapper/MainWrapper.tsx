@@ -19,8 +19,8 @@ export const MainWrapper: React.FC = () => {
     infoElement: [""],
     locationCells: {},
   });
-
   const [compliteLevel, setComplitLevel] = useState<boolean>(true);
+  const [userAnswer, setUserAnswer] = useState<string>("");
   const [level, setlevel] = useState<number>(1);
   const [check, setCheck] = useState<boolean>(false);
 
@@ -41,7 +41,6 @@ export const MainWrapper: React.FC = () => {
         }
       });
   }, [level]);
-
   const View = () => {
     let view;
     if (!check) {
@@ -57,6 +56,7 @@ export const MainWrapper: React.FC = () => {
       </div>
     );
   };
+  
   /*===*/
   const changeLevel = (e: any) => {
     let event = e.target.id;
@@ -69,7 +69,7 @@ export const MainWrapper: React.FC = () => {
   };
   /*===*/
   const test = (e: any): any => {
-    console.log(e);
+    setUserAnswer(e)
   };
 
   return (
