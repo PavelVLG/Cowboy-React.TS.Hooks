@@ -104,12 +104,12 @@ export const MainWrapper: React.FC = () => {
     /******************/
     console.log(transform, "tarnsform");
     const obj = transform.map((item: any): {} => {
-      let newObj: any;
+      let newObj: any = {};
       newObj[item.split(":")[0]] = item.split(":")[1];
       return newObj;
     });
-    console.debug(obj, "obj");
-
+    let newProperty = obj[0];
+    console.log(newProperty, 'nP');
     //   this.setState({
     //     newLev: itemArr
     //   })
