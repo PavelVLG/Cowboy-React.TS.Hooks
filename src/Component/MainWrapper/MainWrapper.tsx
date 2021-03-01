@@ -19,13 +19,13 @@ export const MainWrapper: React.FC = () => {
     infoElement: [""],
     locationCells: {},
   });
+  const [userAnswer, setUserAnswer] = useState<any>("q");
   const [compliteLevel, setComplitLevel] = useState<boolean>(true);
-  const [userAnswer, setUserAnswer] = useState<string>("");
   const [level, setlevel] = useState<number>(1);
-  const [check, setCheck] = useState<boolean>(false);
+  const [checkFetch, setCheckFetch] = useState<boolean>(false);
 
   useEffect(() => {
-    setCheck(true);
+    setCheckFetch(true);
     fetch("http://localhost:3000/DataLevel.json")
       .then((response) => {
         if (response.status !== 200) {
@@ -36,14 +36,15 @@ export const MainWrapper: React.FC = () => {
       })
       .then((data) => {
         if ("step" in data) {
-          setCheck(false);
+          setCheckFetch(false);
           setMyJson(data.step[level]);
         }
       });
   }, [level]);
+  
   const View = () => {
     let view;
-    if (!check) {
+    if (!checkFetch) {
       view = "vievOk";
     } else {
       view = "viewErr";
@@ -56,8 +57,6 @@ export const MainWrapper: React.FC = () => {
       </div>
     );
   };
-  
-  /*===*/
   const changeLevel = (e: any) => {
     let event = e.target.id;
     if (event === "up" && level !== 3) {
@@ -67,9 +66,17 @@ export const MainWrapper: React.FC = () => {
       setlevel(level - 1);
     }
   };
-  /*===*/
-  const test = (e: any): any => {
-    setUserAnswer(e)
+
+  const userOutPut = (e: any): any => {
+    setUserAnswer(e);
+  };
+  /*************************/
+  const testing = () => {
+    let clone = userAnswer;
+    if (!clone) {
+      setComplitLevel(false);
+    }
+    console.log(compliteLevel);
   };
 
   return (
@@ -83,8 +90,8 @@ export const MainWrapper: React.FC = () => {
             infoElement={myJson.infoElement}
           />
           <LevelChange changeLevel={changeLevel} level={level} />
-          <Output getEvent={test} />
-          <StartButton />
+          <Output getEvent={userOutPut} />
+          <StartButton checkUser={testing} />
           <PopUp />
         </div>
         <div className="displayWrapper">
