@@ -1,43 +1,52 @@
 .modal {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-    transform: scale(0);
-  }
-  
-  .modalContent {
-    background: url("/src/Source/png/rdr2.png") no-repeat;
-    border: 3px solid #666666;
-    padding: 20px;
-    border-radius: 12px;
-    background-color: #fafafa;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .active {
-    transform: scale(1);
-  }
-  
-  .modalText {
-    color: #343434;
-    font-size: 26px;
-    font-family: fantasy;
-  }
-  .modalClose {
-    padding-left: 10px;
-  }
-  .closeBtn {
-    font-family: fantasy;
-    font-size: 18px;
-    border-radius: 5px;
-  }
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  transform: scale(0);
+}
+
+.modalContent {
+  background: url("/src/Source/png/rdr2.png") no-repeat;
+  border: 3px solid #666666;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fafafa;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active {
+  transform: scale(1);
+}
+
+.modalText {
+  color: #343434;
+  font-size: 26px;
+  font-family: fantasy;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.modalClose {
+  padding-left: 10px;
+}
+.btnBlock {
+  margin: 0 auto;
+  display: flex;
+}
+.btnClose {
+  background-color: #666666;
+  font-family: fantasy;
+  font-size: 15px;
+  border-radius: 10px;
+  opacity: 63%;
+}

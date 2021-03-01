@@ -23,10 +23,12 @@ export const PopUp: React.FC<Props> = ({ setDisplay, setProps }) => {
         <div className="modalText">
           <p>
             <span>Джо cбежал</span>
-            <label>
-              <button onClick={() => setProps(true)}>Повторить попытку</button>
-            </label>
           </p>
+          <div className="btnBlock">
+            <button className="btnClose" onClick={() => setProps(true)}>
+              Погнаться
+            </button>
+          </div>
         </div>
       </div>
     </div>
