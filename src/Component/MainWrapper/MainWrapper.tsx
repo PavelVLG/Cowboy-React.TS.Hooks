@@ -7,7 +7,6 @@ import { StartButton } from "../Element/StartButton/StartButton";
 import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
-import { strict } from "assert";
 
 export const MainWrapper: React.FC = () => {
   const [myJson, setMyJson] = useState({
@@ -79,7 +78,7 @@ export const MainWrapper: React.FC = () => {
     let check = item.slice();
     check.includes(":") ? forJsxFormat(item) : ifLevelFalse();
   };
-  /******************/
+
   const forJsxFormat = (item: string) => {
     const separation: string[] = item //убираю лишнии пробелы и точки с запятой
       .replace(/\s/g, "")
@@ -101,23 +100,20 @@ export const MainWrapper: React.FC = () => {
         item.split(":")[1]
       );
     });
-    /******************/
-    console.log(transform, "tarnsform");
+
     const obj = transform.map((item: any): {} => {
       let newObj: any = {};
       newObj[item.split(":")[0]] = item.split(":")[1];
       return newObj;
     });
-    let newProperty = obj[0];
-    console.log(newProperty, 'nP');
-    //   this.setState({
-    //     newLev: itemArr
-    //   })
-    //   if (JSON.stringify(obj[0]) === JSON.stringify(itemArr[4].locationCells)) { // проверка пройден ли уровеь
-    //     this.ifLevelTrue()
-    //   } else { this.ifLevelFalse() }
-    //   itemArr[2].task = obj[0]
-    // };
+    console.log(Object.keys(myJson));
+    
+    if (JSON.stringify(obj[0]) === JSON.stringify(myJson.locationCells)) {
+      console.log("Поднять уровень");
+    } else {
+      setComplitLevel(false);
+      console.log(compliteLevel);
+    }
   };
 
   return (
