@@ -7,6 +7,7 @@ import { StartButton } from "../Element/StartButton/StartButton";
 import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
+import { allowedNodeEnvironmentFlags } from "process";
 
 export const MainWrapper: React.FC = () => {
   const [myJson, setMyJson] = useState({
@@ -57,7 +58,6 @@ export const MainWrapper: React.FC = () => {
 
   const ifLevelFalse = (): void => {
     setComplitLevel(false);
-    console.log(compliteLevel);
   };
   const levelUp = () => {
     if (level !== 3) {
@@ -123,12 +123,11 @@ export const MainWrapper: React.FC = () => {
     }
   };
   const timer = (func: () => void): void => {
-    let timerId: NodeJS.Timeout = setTimeout(() => {
+    let timerId: any = setTimeout(() => {
       func();
-    }, 2000);
+    }, 1500);
 
-    clearTimeout(timerId);
-    console.log(timerId);
+    // let clearTimerId =  clearTimeout(timerId);
   };
   return (
     <div className="mainWrapper">
