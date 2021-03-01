@@ -25,8 +25,7 @@
 }
 .displayItem-Prison {
   margin: 5px;
-  min-width: 18.5%;
-
+  min-width: 10.5%;
   background: url("/src/Source/svg/Prison.svg") no-repeat;
   background-size: contain;
 }
