@@ -125,6 +125,7 @@ export const MainWrapper: React.FC = () => {
     let timerId: any = setTimeout(() => {
       func();
     }, 1500);
+    console.log(timerId);
 
     // let clearTimerId =  clearTimeout(timerId);
   };
@@ -141,7 +142,7 @@ export const MainWrapper: React.FC = () => {
           <LevelChange level={level} levelDown={levelDown} levelUp={levelUp} />
           <Output getEvent={setUserAnswer} />
           <StartButton checkUser={testing} />
-          <PopUp />
+          <PopUp setDisplay={compliteLevel} setProps={setComplitLevel} />
         </div>
         <div className="displayWrapper">
           <Display cowboy={myJson.task} priston={myJson.locationCells} />
