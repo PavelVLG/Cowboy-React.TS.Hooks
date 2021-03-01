@@ -57,7 +57,7 @@ export const MainWrapper: React.FC = () => {
   const changeLevel = (e: any) => {
     let event = e.target.id;
     if (event === "up" && level !== 3) {
-      setlevel(level + 1);
+      setlevel(level + 1); // callback?
     }
     if (event === "down" && level !== 1) {
       setlevel(level - 1);
@@ -104,10 +104,13 @@ export const MainWrapper: React.FC = () => {
     const obj = transform.map((item: any): {} => {
       let newObj: any = {};
       newObj[item.split(":")[0]] = item.split(":")[1];
+      setMyJson((task) => {
+        return { ...myJson, task: newObj };
+      });
       return newObj;
     });
     console.log(Object.keys(myJson));
-    
+
     if (JSON.stringify(obj[0]) === JSON.stringify(myJson.locationCells)) {
       console.log("Поднять уровень");
     } else {
