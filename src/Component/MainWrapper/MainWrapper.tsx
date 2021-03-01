@@ -114,7 +114,6 @@ export const MainWrapper: React.FC = () => {
       });
       return newObj;
     });
-    console.log(Object.keys(myJson));
 
     if (JSON.stringify(obj[0]) === JSON.stringify(myJson.locationCells)) {
       levelUp();
