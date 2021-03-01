@@ -18,7 +18,7 @@ export const MainWrapper: React.FC = () => {
     infoElement: [""],
     locationCells: {},
   });
-  const [userAnswer, setUserAnswer] = useState<any>("q");
+  const [userAnswer, setUserAnswer] = useState<any>("");
   const [compliteLevel, setComplitLevel] = useState<boolean>(true);
   const [level, setlevel] = useState<number>(1);
   const [checkFetch, setCheckFetch] = useState<boolean>(false);
@@ -65,7 +65,7 @@ export const MainWrapper: React.FC = () => {
       setlevel(level - 1);
     }
   };
-  /*************************/
+
   const ifLevelFalse = (): void => {
     console.log("LevelFalse");
   };
@@ -78,7 +78,7 @@ export const MainWrapper: React.FC = () => {
   };
   const checkUserInput = (item: string) => {
     let check = item.slice();
-    check.includes(";") ? forJsxFormat(item) : ifLevelFalse();
+    check.includes(":") ? forJsxFormat(item) : ifLevelFalse();
   };
   const forJsxFormat = (a: string) => {
     console.log("for Jsx");
