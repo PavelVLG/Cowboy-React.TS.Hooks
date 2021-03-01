@@ -1,6 +1,11 @@
+import React from "react";
 import "./Output.css";
 
-export const Output: React.FC = () => {
+interface ProppsFunc {
+  getEvent: (e: any) => void;
+}
+
+export const Output: React.FC<ProppsFunc> = ({ getEvent }) => {
   return (
     <div className="exitConteiner">
       <p className="exit-befor">
@@ -12,7 +17,7 @@ export const Output: React.FC = () => {
         className="exitInput"
         placeholder="поле ввода"
         onChange={(e) => {
-          console.log(e.target.value, "OutPut");
+          getEvent(e.target.value);
         }}
         id="txtarea"
       ></textarea>

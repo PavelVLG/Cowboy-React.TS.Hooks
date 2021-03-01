@@ -19,6 +19,8 @@ export const MainWrapper: React.FC = () => {
     infoElement: [""],
     locationCells: {},
   });
+
+  const [compliteLevel, setComplitLevel] = useState<boolean>(true);
   const [level, setlevel] = useState<number>(1);
   const [check, setCheck] = useState<boolean>(false);
 
@@ -66,6 +68,9 @@ export const MainWrapper: React.FC = () => {
     }
   };
   /*===*/
+  const test = (e: any): any => {
+    console.log(e);
+  };
 
   return (
     <div className="mainWrapper">
@@ -78,7 +83,7 @@ export const MainWrapper: React.FC = () => {
             infoElement={myJson.infoElement}
           />
           <LevelChange changeLevel={changeLevel} level={level} />
-          <Output />
+          <Output getEvent={test} />
           <StartButton />
           <PopUp />
         </div>

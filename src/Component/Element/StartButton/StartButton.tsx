@@ -13,6 +13,6 @@ export const StartButton: React.FC = () => {
           Старт
         </button>
       </div>
-    </div>
+    </div> 
   );
 };
