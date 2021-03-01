@@ -2,11 +2,12 @@ import React from "react";
 import "./LevelChange.css";
 
 interface PropsFunc {
-  changeLevel: (e: any) => void;
+  levelUp: () => void;
+  levelDown: () => void;
   level: number;
 }
 
-export const LevelChange: React.FC<PropsFunc> = ({ changeLevel, level }) => {
+export const LevelChange: React.FC<PropsFunc> = ({ levelDown,levelUp, level }) => {
   return (
     <div className="textButton-conteiner">
       <div className="textFlex">
@@ -19,7 +20,7 @@ export const LevelChange: React.FC<PropsFunc> = ({ changeLevel, level }) => {
               className="button-1"
               type="button"
               id="down"
-              onClick={changeLevel}
+              onClick={levelDown}
             >
               назад
             </button>
@@ -29,7 +30,7 @@ export const LevelChange: React.FC<PropsFunc> = ({ changeLevel, level }) => {
               className="button-2"
               type="button"
               id="up"
-              onClick={changeLevel}
+              onClick={levelUp}
             >
               вперед
             </button>

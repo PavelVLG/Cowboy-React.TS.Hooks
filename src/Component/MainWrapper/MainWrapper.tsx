@@ -54,18 +54,23 @@ export const MainWrapper: React.FC = () => {
       </div>
     );
   };
-  const changeLevel = (e: any) => {
-    let event = e.target.id;
-    if (event === "up" && level !== 3) {
-      setlevel(level + 1); // callback?
-    }
-    if (event === "down" && level !== 1) {
-      setlevel(level - 1);
-    }
-  };
 
   const ifLevelFalse = (): void => {
     setComplitLevel(false);
+  };
+  const levelUp = () => {
+    if (level !== 3) {
+      setlevel((level) => {
+        return level + 1;
+      }); // callback?
+    }
+  };
+  const levelDown = () => {
+    if (level !== 1) {
+      setlevel((level) => {
+        return level - 1;
+      });
+    }
   };
   const testing = () => {
     if (!userAnswer) {
@@ -112,10 +117,9 @@ export const MainWrapper: React.FC = () => {
     console.log(Object.keys(myJson));
 
     if (JSON.stringify(obj[0]) === JSON.stringify(myJson.locationCells)) {
-      console.log("Поднять уровень");
+      levelUp();
     } else {
       setComplitLevel(false);
-      console.log(compliteLevel);
     }
   };
 
@@ -129,7 +133,7 @@ export const MainWrapper: React.FC = () => {
             subTitleText={myJson.taskDescription}
             infoElement={myJson.infoElement}
           />
-          <LevelChange changeLevel={changeLevel} level={level} />
+          <LevelChange level={level} levelDown={levelDown} levelUp={levelUp} />
           <Output getEvent={setUserAnswer} />
           <StartButton checkUser={testing} />
           <PopUp />
