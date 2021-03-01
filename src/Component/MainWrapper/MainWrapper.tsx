@@ -62,7 +62,7 @@ export const MainWrapper: React.FC = () => {
     if (level !== 3) {
       setlevel((level) => {
         return level + 1;
-      }); // callback?
+      });
     }
   };
   const levelDown = () => {
@@ -116,12 +116,15 @@ export const MainWrapper: React.FC = () => {
     });
 
     if (JSON.stringify(obj[0]) === JSON.stringify(myJson.locationCells)) {
-      levelUp();
-    } else {
-      setComplitLevel(false);
+      timer(levelUp);
     }
   };
-
+  const timer = (func: () => void): void => {
+    let timerId: NodeJS.Timeout = setTimeout(() => {
+      func();
+    }, 2000);
+    clearTimeout(timerId);
+  };
   return (
     <div className="mainWrapper">
       <View />
