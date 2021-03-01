@@ -7,7 +7,6 @@ import { StartButton } from "../Element/StartButton/StartButton";
 import { SubTitle } from "../Element/SubTitle/SubTitle";
 import { TitleHeader } from "../Element/TitleHeader/TitleHeader";
 import { Display } from "../Element/Display/Display";
-import { allowedNodeEnvironmentFlags } from "process";
 
 export const MainWrapper: React.FC = () => {
   const [myJson, setMyJson] = useState({
