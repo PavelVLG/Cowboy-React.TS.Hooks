@@ -6,13 +6,12 @@
 }
 .levelHeader {
   font-weight: 600;
-  vertical-align:top;
+  vertical-align: top;
 }
 .levelUl {
-
 }
 .levelLi {
-
+  margin-top: 3px;
   font-family: Times;
-  vertical-align:top;
+  vertical-align: top;
 }

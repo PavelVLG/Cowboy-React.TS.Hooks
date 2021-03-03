@@ -27,7 +27,7 @@
       "infoElement": [
         "justify-content: center; ~ располагает елемент в центре блока.",
         "justify-content: flex-end; ~ располагает элемент в правом углу по оси X.",
-        "ustify-content: flex-start; ~ располагает элемент в левом углу по оси X."
+        "justify-content: flex-start; ~ располагает элемент в левом углу по оси X."
       ],
       "locationCells": { "justifyContent": "flex-end" }
     }
