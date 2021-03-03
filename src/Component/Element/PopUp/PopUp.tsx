@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./PopUp.css";
 import Horse from "../../../Source/Audo/horse.mp3";
-const audioHorse: HTMLAudioElement = new Audio(Horse);
+
 interface Props {
   setDisplay: boolean;
   setProps: any;
 }
 export const PopUp: React.FC<Props> = ({ setDisplay, setProps }) => {
   const [popUp, setPopUp] = useState<string>("modal");
+  const [audioHorse] = useState<HTMLAudioElement>(new Audio(Horse));
   useEffect(() => {
     if (!setDisplay) {
       setPopUp(() => {
