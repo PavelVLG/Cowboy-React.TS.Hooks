@@ -1,8 +1,7 @@
 export interface IData {
-  introductory: string | null;
-  taskDescription: string | null;
-  task: { key: object; value: string } | null;
-  infoElement: string[] | null;
-  locationCells: { key: object; property: string } | null;
+  introductory: string;
+  taskDescription: string;
+  task: { key: object; value: string };
+  infoElement: string[];
+  locationCells: { key: object; property: string };
 }
- 
