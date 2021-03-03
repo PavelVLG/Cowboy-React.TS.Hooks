@@ -10,7 +10,7 @@ export const SubTitle: React.FC<addData> = ({ subTitleText, infoElement }) => {
   };
 
   const SubTitleText = (): JSX.Element => {
-    return Object(infoElement).map((item: string, id: number) => {
+    return  Object(infoElement).map((item: string, id: number) => {
       return (
         <li className="levelLi" key={id}>
           {item}
