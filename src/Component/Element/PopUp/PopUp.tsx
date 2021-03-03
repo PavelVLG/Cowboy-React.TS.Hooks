@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./PopUp.css";
+import Mus from "../Source/Audo/horse.mp3";
 interface Props {
   setDisplay: boolean;
   setProps: any;
