@@ -15,7 +15,7 @@ export const Output: React.FC<ProppsFunc> = ({ getEvent }) => {
       <textarea
         className="exitInput"
         placeholder="поле ввода"
-        onChange={(e) => {
+        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
           getEvent(e.target.value);
         }}
         id="txtarea"
