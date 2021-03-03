@@ -19,7 +19,7 @@ HeroLevel
 
 - [ fail ] все элементы работают как надо
 
-TODO: 2 Марта.
+TODO: 3 Марта.
 
 Must have
 
