@@ -29,7 +29,7 @@
         "justify-content: flex-end; ~ располагает элемент в правом углу по оси X.",
         "justify-content: flex-start; ~ располагает элемент в левом углу по оси X."
       ],
-      "locationCells": { "justifyContent": "flex-end" }
+      "locationCells": { "justifyContent": "flex-start" }
     }
   }
 }

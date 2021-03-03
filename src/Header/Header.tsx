@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
     return sound;
   };
 
-  const test = (): any => {
+  const test = (): void => {
     setVolume((): any => {
       setVolume(!volume);
     });

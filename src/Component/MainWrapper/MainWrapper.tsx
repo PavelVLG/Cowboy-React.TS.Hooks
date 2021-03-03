@@ -124,9 +124,9 @@ export const MainWrapper: React.FC = () => {
   const timer = (func: () => void): ((func: NodeJS.Timer) => void) => {
     let timerId: NodeJS.Timeout = setTimeout(() => func(), 3000);
     console.log(timerId);
-    // return () => {
-    //   clearTimeout(timerId);
-    // };
+    return () => {
+      clearTimeout(timerId);
+    };
   };
   return (
     <div className="mainWrapper">
