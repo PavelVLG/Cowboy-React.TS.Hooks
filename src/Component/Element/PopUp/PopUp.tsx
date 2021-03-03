@@ -16,6 +16,8 @@ export const PopUp: React.FC<Props> = ({ setDisplay, setProps }) => {
       });
     } else {
       setPopUp(() => {
+        audioHorse.pause();
+        audioHorse.currentTime = 0;
         return "modal";
       });
     }
