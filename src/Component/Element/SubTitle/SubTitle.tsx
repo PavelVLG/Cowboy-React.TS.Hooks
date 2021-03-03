@@ -2,7 +2,7 @@ import React from "react";
 import "./SubTitle.css";
 interface addData {
   subTitleText: string;
-  infoElement: object[];
+  infoElement: string [];
 }
 export const SubTitle: React.FC<addData> = ({ subTitleText, infoElement }) => {
   const SubTitleHeader = (): JSX.Element => {

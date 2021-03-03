@@ -121,13 +121,12 @@ export const MainWrapper: React.FC = () => {
       ifLevelFalse();
     }
   };
-  const timer = (func: () => void): void => {
-    let timerId: any = setTimeout(() => {
-      func();
-    }, 1500);
+  const timer = (func: () => void): ((func: NodeJS.Timer) => void) => {
+    let timerId: NodeJS.Timeout = setTimeout(() => func(), 3000);
     console.log(timerId);
-
-    // let clearTimerId =  clearTimeout(timerId);
+    return () => {
+      clearTimeout(timerId);
+    };
   };
   return (
     <div className="mainWrapper">
