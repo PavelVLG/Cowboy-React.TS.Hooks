@@ -126,6 +126,7 @@ export const MainWrapper: React.FC = () => {
     console.log(timerId);
     return () => {
       clearTimeout(timerId);
+      /*callback*/
     };
   };
   return (
