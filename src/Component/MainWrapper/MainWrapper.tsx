@@ -116,17 +116,18 @@ export const MainWrapper: React.FC = () => {
     });
 
     if (JSON.stringify(obj[0]) === JSON.stringify(myJson.locationCells)) {
-      timer(levelUp)();
+      timer(levelUp);
     } else {
       ifLevelFalse();
     }
   };
-  const timer = (func: () => void): (() => void) => {
-    const timerId = window.setTimeout(() => func, 3000);
-    console.log(timerId);
-    return () => {
-      console.log("df");
-    };
+  const timer = (func: () => void): any => {
+    const timerId = window.setTimeout(goBack, 2000);
+    function goBack() {
+      func();
+      clearTimeout(timerId);
+      console.log(timerId);
+    }
   };
   return (
     <div className="mainWrapper">
