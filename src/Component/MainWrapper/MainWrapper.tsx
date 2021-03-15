@@ -16,7 +16,7 @@ export const MainWrapper: React.FC = () => {
     infoElement: [""],
     locationCells: {},
   });
-  const [userAnswer, setUserAnswer] = useState<any>("");
+  const [userAnswer, setUserAnswer] = useState<string>("");
   const [compliteLevel, setComplitLevel] = useState<boolean>(true);
   const [level, setlevel] = useState<number>(1);
   const [checkFetch, setCheckFetch] = useState<boolean>(false);
@@ -85,10 +85,10 @@ export const MainWrapper: React.FC = () => {
   };
 
   const forJsxFormat = (item: string) => {
-    const separation: string[] = item //убираю лишнии пробелы и точки с запятой
+    const separation: string[] = item
       .replace(/\s/g, "")
       .split(";")
-      .filter(function (elem: any) {
+      .filter(function (elem: string) {
         return elem !== "";
       });
 
@@ -106,7 +106,7 @@ export const MainWrapper: React.FC = () => {
       );
     });
 
-    const obj = transform.map((item: any): {} => {
+    const obj = transform.map((item: string): {} => {
       let newObj: any = {};
       newObj[item.split(":")[0]] = item.split(":")[1];
       setMyJson((task) => {
@@ -121,11 +121,11 @@ export const MainWrapper: React.FC = () => {
       ifLevelFalse();
     }
   };
-  const timer = (func: () => void): any => {
+  const timer = (func: () => void): void => {
     const timerId = window.setTimeout(goBack, 2000);
     function goBack() {
       func();
-      clearTimeout(timerId);
+      void clearTimeout(timerId);
       console.log(timerId);
     }
   };
