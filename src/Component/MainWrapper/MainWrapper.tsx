@@ -107,7 +107,7 @@ export const MainWrapper: React.FC = () => {
     });
 
     const obj = transform.map((item: string): {} => {
-      let newObj: any = {};
+      let newObj: Record<string, string> = {};
       newObj[item.split(":")[0]] = item.split(":")[1];
       setMyJson((task) => {
         return { ...myJson, task: newObj };
