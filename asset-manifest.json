@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Cowboy-React.TS.Hooks/static/css/main.a4364a3d.chunk.css",
+    "main.js": "/Cowboy-React.TS.Hooks/static/js/main.aac69d42.chunk.js",
+    "main.js.map": "/Cowboy-React.TS.Hooks/static/js/main.aac69d42.chunk.js.map",
+    "runtime-main.js": "/Cowboy-React.TS.Hooks/static/js/runtime-main.601e8005.js",
+    "runtime-main.js.map": "/Cowboy-React.TS.Hooks/static/js/runtime-main.601e8005.js.map",
+    "static/js/2.5b0cdb11.chunk.js": "/Cowboy-React.TS.Hooks/static/js/2.5b0cdb11.chunk.js",
+    "static/js/2.5b0cdb11.chunk.js.map": "/Cowboy-React.TS.Hooks/static/js/2.5b0cdb11.chunk.js.map",
+    "static/js/3.df09519c.chunk.js": "/Cowboy-React.TS.Hooks/static/js/3.df09519c.chunk.js",
+    "static/js/3.df09519c.chunk.js.map": "/Cowboy-React.TS.Hooks/static/js/3.df09519c.chunk.js.map",
+    "index.html": "/Cowboy-React.TS.Hooks/index.html",
+    "static/css/main.a4364a3d.chunk.css.map": "/Cowboy-React.TS.Hooks/static/css/main.a4364a3d.chunk.css.map",
+    "static/js/2.5b0cdb11.chunk.js.LICENSE.txt": "/Cowboy-React.TS.Hooks/static/js/2.5b0cdb11.chunk.js.LICENSE.txt",
+    "static/media/MainWrapper.css": "/Cowboy-React.TS.Hooks/static/media/Mask.588da011.svg",
+    "static/media/Header.css": "/Cowboy-React.TS.Hooks/static/media/Volume.8acb4bab.svg",
+    "static/media/Display.css": "/Cowboy-React.TS.Hooks/static/media/cowboy.807837bd.svg",
+    "static/media/StartButton.css": "/Cowboy-React.TS.Hooks/static/media/handcuffs.c813847f.svg",
+    "static/media/horse.013bf418.mp3": "/Cowboy-React.TS.Hooks/static/media/horse.013bf418.mp3",
+    "static/media/PopUp.css": "/Cowboy-React.TS.Hooks/static/media/rdr2.e083fe33.png",
+    "static/media/ugly.74c54ec8.mp3": "/Cowboy-React.TS.Hooks/static/media/ugly.74c54ec8.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.601e8005.js",
+    "static/js/2.5b0cdb11.chunk.js",
+    "static/css/main.a4364a3d.chunk.css",
+    "static/js/main.aac69d42.chunk.js"
+  ]
+}
