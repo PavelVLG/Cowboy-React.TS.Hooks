@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, CSSProperties } from "react";
 import "./MainWrapper.css";
 import { LevelChange } from "../Element/LevelChange/LevelChange";
 import { Output } from "../Element/Output/Output";
@@ -112,6 +112,7 @@ export const MainWrapper: React.FC = () => {
       setMyJson((task) => {
         return { ...myJson, task: newObj };
       });
+      console.log(newObj);
       return newObj;
     });
 
